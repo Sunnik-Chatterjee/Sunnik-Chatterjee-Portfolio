@@ -37,6 +37,6 @@ To run this project locally:
 
 ## 📬 Contact
 
-- Email: your-email@example.com
+- Email: dev.sunnikchatterjee@gmail.com
 - LinkedIn: [Sunnik Chatterjee](https://www.linkedin.com/in/sunnikchatterjee/)
 - GitHub: [@Sunnik-Chatterjee](https://github.com/Sunnik-Chatterjee)
