@@ -1,1 +1,84 @@
-<p>project-card works!</p>
+<article class="wanted-card">
+
+  <!-- Card header -->
+  <header class="wanted-header">
+    <span class="wanted-number">
+      {{ project.number }} · {{ project.category }}
+    </span>
+
+    @if (project.featured) {
+      <span class="featured-label">FEATURED</span>
+    }
+  </header>
+
+  <!-- Project image -->
+  <div class="wanted-image">
+
+    @if (project.image) {
+      <img
+        [src]="project.image"
+        [alt]="project.title + ' project preview'"
+        loading="lazy"
+      />
+    } @else {
+      <div class="image-placeholder">
+        <span>PROJECT PREVIEW</span>
+      </div>
+    }
+
+  </div>
+
+  <!-- Project details -->
+  <div class="wanted-content">
+
+    <h3>{{ project.title }}</h3>
+
+    <div class="wanted-divider">
+      <span>WANTED</span>
+    </div>
+
+    <p class="project-tagline">
+      {{ project.tagline }}
+    </p>
+
+    <p class="project-description">
+      {{ project.description }}
+    </p>
+
+    <!-- Technology stack -->
+    <div class="project-technologies">
+      @for (technology of project.technologies; track technology) {
+        <span class="technology-tag">
+          {{ technology }}
+        </span>
+      }
+    </div>
+
+    <!-- Project links -->
+    <footer class="wanted-footer">
+
+      @if (project.githubUrl) {
+        <a
+          [href]="project.githubUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CODE <span>↗</span>
+        </a>
+      }
+
+      @if (project.liveUrl) {
+        <a
+          [href]="project.liveUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LIVE DEMO <span>↗</span>
+        </a>
+      }
+
+    </footer>
+
+  </div>
+
+</article>

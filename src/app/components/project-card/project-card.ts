@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Project } from '../../sections/projects/project.model';
 
 @Component({
-  imports: [],
   selector: 'app-project-card',
-  styleUrl: './project-card.scss',
+  standalone: true,
+  imports: [],
   templateUrl: './project-card.html',
+  styleUrl: './project-card.scss',
 })
-export class ProjectCard {}
+export class ProjectCard {
+  @Input({ required: true }) project!: Project;
+}

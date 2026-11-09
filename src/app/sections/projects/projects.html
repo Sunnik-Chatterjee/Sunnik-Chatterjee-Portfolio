@@ -1,1 +1,122 @@
-<p>projects works!</p>
+
+<section class="projects section" id="projects" #projectsSection>
+
+  <!-- Section heading -->
+  <div class="projects-intro" data-reveal>
+
+    <div class="intro-top">
+      <span class="intro-overline">
+        <span class="overline-star">✳</span>
+        THE BUILDER'S JOURNAL
+      </span>
+
+      <span class="chapter-number">CHAPTER III</span>
+    </div>
+
+    <div class="intro-main">
+
+      <div class="intro-title">
+        <span class="title-prelude">A FEW THINGS I'VE PUT INTO THE WORLD</span>
+
+        <h2>
+          MADE WITH
+          <span class="title-highlight">PURPOSE.</span>
+        </h2>
+
+        <div class="title-underline">
+          <span></span>
+          <span class="underline-star">✳</span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="intro-copy">
+        <div class="copy-mark">“</div>
+
+        <p>
+          From ideas scribbled on paper to systems brought to life.
+          Every build has a story, and these are a few chapters
+          from mine.
+        </p>
+
+        <span class="copy-signature">— THE WORKSHOP ARCHIVE</span>
+      </div>
+
+    </div>
+
+    <div class="intro-bottom">
+      <span>SELECTED WORKS</span>
+
+      <div class="bottom-decoration">
+        <span></span>
+        <span class="bottom-star">✳</span>
+        <span></span>
+      </div>
+
+      <span>SCROLL TO EXPLORE <span class="scroll-arrow">↓</span></span>
+    </div>
+
+  </div>
+
+  <!-- Horizontal project gallery -->
+  <div class="projects-viewport" #projectsViewport>
+
+    <div class="wanted-board" #wantedBoard>
+
+      @for (project of projects; track project.id; let i = $index) {
+        <div
+          class="project-item"
+          [style.--r]="i % 2 === 0 ? '-1deg' : '1deg'"
+        >
+          <app-project-card [project]="project" />
+        </div>
+      }
+
+      <!-- Next project teaser -->
+      <article class="teaser-card">
+
+        <div class="teaser-top">
+          <span>BOUNTY NO. {{ ((projects?.length ?? 0) + 1) | number:'3.0-0' }}</span>
+          <span>RESTRICTED ACCESS</span>
+        </div>
+
+        <div class="teaser-content">
+
+          <div class="teaser-seal">
+            <span>THE NEXT</span>
+            <strong>?</strong>
+            <span>CHAPTER</span>
+          </div>
+
+          <p class="teaser-kicker">A NEW STORY IS TAKING SHAPE</p>
+
+          <h3>
+            Something's
+            <em>brewing.</em>
+          </h3>
+
+          <p class="teaser-description">
+            The next bounty hasn't been revealed.
+            Keep an eye on the horizon.
+          </p>
+
+        </div>
+
+        <div class="teaser-bottom">
+          <span>CLASSIFIED</span>
+          <span>COMING SOON</span>
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+  <div class="projects-footer">
+    <span>END OF CURRENT RECORD</span>
+    <span class="footer-ornament">✳</span>
+    <span>MORE STORIES AHEAD</span>
+  </div>
+
+</section>
