@@ -9,7 +9,7 @@ import { Achievements } from './sections/achievements/achievements';
 import { Contact } from './sections/contact/contact';
 
 @Component({
-  imports: [RouterOutlet, Header, Hero, About, Skills,Projects,Achievements,Contact],
+  imports: [Header, Hero, About, Skills,Projects,Achievements,Contact],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',
