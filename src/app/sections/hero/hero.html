@@ -1,0 +1,45 @@
+<section class="hero" id="home">
+    <div class="hero-background" aria-hidden="true">
+  <video
+    class="hero-video"
+    [src]="videoSrc()"
+    autoplay
+    [muted]="true"
+    [volume]="0"
+    loop
+    preload="metadata"
+    [attr.playsinline]="''"
+  ></video>
+</div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-copy">
+        <p class="eyebrow">
+            FULL-STACK DEVLOPER
+        </p>
+        <h1>
+            Sunnik
+            <span>Chatterjee</span>
+        </h1>
+        <p class="hero-intro">
+            I craft resilient digital experiences at the intersection of thoughtful engineering and cinematic
+            styorytelling.
+        </p>
+
+        <div class="hero-actions">
+            <a href="#about" class="button button-primary">View my journey
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M14 7l5 5-5 5" />
+                </svg>
+            </a>
+            <a href="https://drive.google.com/file/d/1niWqNeqH9NjwRTLg927q-wn4Kzid0f5E/view?usp=drive_link"
+                class="button button-ghost" target="_blank" rel="noopener noreferrer">View Résumé</a>
+        </div>
+    </div>
+
+    <div class="hero-caption">
+        <span>01</span>
+        <p>Keep Scrolling <br> The trail starts here</p>
+    </div>
+    <a href="#about" class="scroll-cue" aria--label="Scroll to story"><span></span></a>
+</section>

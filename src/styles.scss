@@ -1,1 +1,88 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Source+Serif+4:wght@400;500;600;700&family=Special+Elite&display=swap');
+:root {
+    /* Color palette */
+    --color-ink: #24140e;
+    --color-cream: #f2dfbd;
+    --color-paper: #d8b982;
+    --color-rust: #9b3023;
+    --color-gold: #d89a4a;
+    --color-night: #130d0a;
+
+    /* Typography */
+    --font-heading: 'Rye', serif;
+    --font-accent: 'Special Elite', serif;
+    --font-body: 'Source Serif 4', serif;
+
+    /* Layout */
+    --container-width: 1200px;
+    --section-spacing: 100px;
+
+    /* Transitions */
+    --transition-fast: 200ms ease;
+    --transition-normal: 400ms ease;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    background-color: var(--color-night);
+    color: var(--color-cream);
+    font-family: var(--font-body);
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+button,input,textarea{
+    font: inherit;
+}
+
+h1,h2,h3{
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.2;
+}
+p{
+    font-family: var(--font-body);
+    line-height:1.7;
+}
+.label{
+    font-family: var(--font-accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+}
+
+.container{
+    width: min(90%,var(--container-width));
+    margin-inline:auto;
+}
+.section{
+    position: relative;
+    padding-block: var(--section-spacing);
+}
+.section-heading{
+    margin-bottom: 3rem;
+}
+.text-gold{
+    color: var(--color-gold);
+}
+.text-rust{
+    color: var(--color-rust);
+}
+
+@media (max-width:768px){
+    :root{
+        --section-spacing:70px
+    }
+    .container{
+        width: 92%;
+    }
+}
