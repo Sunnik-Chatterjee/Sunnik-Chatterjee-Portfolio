@@ -1,1 +1,61 @@
-<p>achievement-card works!</p>
+<article class="achievement-card" data-reveal>
+
+  <div class="card-top">
+    <span class="achievement-number">
+      RECORD NO. {{ achievement.number }}
+    </span>
+
+    <span class="achievement-type">
+      {{ achievement.type }}
+    </span>
+  </div>
+
+  <div class="card-emblem">
+
+    @if (achievement.image) {
+      <img
+        [src]="achievement.image"
+        [alt]="achievement.title + ' emblem'"
+        loading="lazy"
+      />
+    } @else {
+      <div class="emblem-inner">
+        <span class="emblem-star">✳</span>
+      </div>
+    }
+
+  </div>
+
+  <div class="card-content">
+
+    <span class="issuer">{{ achievement.issuer }}</span>
+
+    <h3>{{ achievement.title }}</h3>
+
+    <p>{{ achievement.description }}</p>
+
+  </div>
+
+  <div class="card-bottom">
+
+    @if (achievement.date) {
+      <span class="achievement-date">
+        {{ achievement.date }}
+      </span>
+    }
+
+    @if (achievement.credentialUrl) {
+      <a
+        [href]="achievement.credentialUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        VIEW RECORD ↗
+      </a>
+    } @else {
+      <span class="record-seal">FIELD RECORD</span>
+    }
+
+  </div>
+
+</article>

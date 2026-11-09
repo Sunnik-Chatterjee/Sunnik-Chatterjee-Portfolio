@@ -1,1 +1,75 @@
-<p>achievements works!</p>
+<section
+  class="achievements section"
+  id="achievements"
+  #achievementsSection
+>
+
+  <!-- Section heading -->
+  <header class="achievements-intro" data-reveal>
+
+    <div class="achievement-overline">
+      <span class="overline-symbol">✳</span>
+      <span>THE BUILDER'S JOURNAL</span>
+      <span class="overline-divider"></span>
+      <span>CHAPTER IV</span>
+    </div>
+
+    <div class="achievement-heading">
+
+      <div class="heading-copy">
+        <span class="heading-kicker">
+          FIELD NOTES · MILESTONES
+        </span>
+
+        <h2>
+          MARKS ALONG
+          <em>THE TRAIL.</em>
+        </h2>
+      </div>
+
+      <div class="heading-description">
+
+        <p>
+          Every milestone is a reminder of the work,
+          curiosity and persistence that brought me here.
+          The journey is far from over.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="achievement-rule">
+      <span>RECOGNITION & CREDENTIALS</span>
+
+      <div class="rule-decoration">
+        <span></span>
+        <span>✳</span>
+        <span></span>
+      </div>
+
+      <span>
+        {{ achievements.length | number:'2.0-0' }} RECORDS
+      </span>
+    </div>
+
+  </header>
+
+  <!-- Achievement cards -->
+  <div class="achievement-board">
+
+    @for (achievement of achievements; track achievement.id) {
+      <app-achievement-card
+        [achievement]="achievement"
+      />
+    }
+
+  </div>
+
+  <!-- Closing note -->
+  <footer class="achievement-footer">
+    <span>THE RECORD CONTINUES</span>
+    <span class="footer-star">✳</span>
+    <span>MORE MILESTONES AHEAD</span>
+  </footer>
+
+</section>

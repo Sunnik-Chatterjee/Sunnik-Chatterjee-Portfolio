@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Achievement } from '../../sections/achievements/achievements.model';
 
 @Component({
-  imports: [],
   selector: 'app-achievement-card',
-  styleUrl: './achievement-card.scss',
+  standalone: true,
+  imports: [],
   templateUrl: './achievement-card.html',
+  styleUrl: './achievement-card.scss',
 })
-export class AchievementCard {}
+export class AchievementCard {
+  @Input({ required: true }) achievement!: Achievement;
+}
