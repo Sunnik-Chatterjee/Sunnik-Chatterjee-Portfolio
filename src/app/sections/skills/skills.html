@@ -1,1 +1,150 @@
-<p>skills works!</p>
+
+<section class="workshop section" id="skills" #workshop>
+  <div class="section-heading" data-reveal>
+    <p class="eyebrow">CHAPTER II · THE WORKSHOP</p>
+
+    <h2>
+      TOOLS OF
+      <br />
+      <em>the trade</em>
+    </h2>
+
+    <p class="section-description">
+      Every dependable build begins with the right tools and the patience
+      to master them.
+    </p>
+  </div>
+
+  <div class="skill-board" data-reveal>
+    <div class="nail nail-one" aria-hidden="true"></div>
+    <div class="nail nail-two" aria-hidden="true"></div>
+
+    <article class="skill-item">
+      <span class="skill-number">01</span>
+      <div class="skill-content">
+        <h3>LANGUAGES</h3>
+        <p>Java · Kotlin · Python · C++ · JavaScript · SQL · TypeScript</p>
+      </div>
+      <i class="skill-indicator" aria-hidden="true"></i>
+    </article>
+
+    <article class="skill-item">
+      <span class="skill-number">02</span>
+      <div class="skill-content">
+        <h3>FRAMEWORKS</h3>
+        <p>Spring Boot · Angular · FastAPI · Jetpack Compose</p>
+      </div>
+      <i class="skill-indicator" aria-hidden="true"></i>
+    </article>
+
+    <article class="skill-item">
+      <span class="skill-number">03</span>
+      <div class="skill-content">
+        <h3>DATABASES</h3>
+        <p>PostgreSQL · MongoDB · MySQL · Firebase</p>
+      </div>
+      <i class="skill-indicator" aria-hidden="true"></i>
+    </article>
+
+    <article class="skill-item">
+      <span class="skill-number">04</span>
+      <div class="skill-content">
+        <h3>ENGINEERING TOOLS</h3>
+        <p>Git · GitHub · Docker · Postman · Render</p>
+      </div>
+      <i class="skill-indicator" aria-hidden="true"></i>
+    </article>
+  </div>
+
+  <!-- Keep the lantern as a sibling of the heading and board -->
+  
+<div class="lantern" #lantern aria-hidden="true">
+
+  <!-- Fixed hanging point -->
+  <div class="lantern-hook"></div>
+
+  <!-- Everything below this point swings together -->
+  <div class="lantern-swing">
+
+    <svg class="lantern-handle" viewBox="0 0 100 55">
+      <path d="M12 48 C12 -5 88 -5 88 48"
+        fill="none" stroke="#79552f" stroke-width="8" />
+      <path d="M12 48 C12 -5 88 -5 88 48"
+        fill="none" stroke="#d6a768" stroke-width="3" />
+    </svg>
+
+    <div class="lantern-cap">
+      <div class="cap-vent"></div>
+      <div class="cap-vent"></div>
+      <div class="cap-vent"></div>
+    </div>
+
+    <div class="lantern-glass">
+      <div class="glass-reflection"></div>
+
+      <svg class="lantern-flame" viewBox="0 0 100 140">
+        <defs>
+          <radialGradient id="flameGlow">
+            <stop offset="0%" stop-color="#fff5c5" stop-opacity="1"/>
+            <stop offset="45%" stop-color="#ffad32" stop-opacity=".75"/>
+            <stop offset="100%" stop-color="#ff671c" stop-opacity="0"/>
+          </radialGradient>
+
+          <linearGradient id="outerFlame" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="#ff4c12"/>
+            <stop offset="55%" stop-color="#ff9c2b"/>
+            <stop offset="100%" stop-color="#fff0a5"/>
+          </linearGradient>
+
+          <linearGradient id="innerFlame" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="#ff8c20"/>
+            <stop offset="100%" stop-color="#fff9dc"/>
+          </linearGradient>
+
+          <filter id="flameBlur">
+            <feGaussianBlur stdDeviation="7"/>
+          </filter>
+        </defs>
+
+        <ellipse class="flame-halo"
+          cx="50" cy="76" rx="38" ry="48"
+          fill="url(#flameGlow)" filter="url(#flameBlur)"/>
+
+        <path class="flame-outer"
+          fill="url(#outerFlame)"
+          d="M50 8 C60 33 83 48 70 91
+             C65 112 58 127 50 130
+             C34 126 20 109 28 82
+             C33 64 43 48 39 33
+             C47 43 48 54 50 8Z"/>
+
+        <path class="flame-inner"
+          fill="url(#innerFlame)"
+          d="M50 54 C59 71 65 84 56 105
+             C53 115 47 117 43 105
+             C37 89 46 72 50 54Z"/>
+
+        <ellipse class="flame-core"
+          cx="50" cy="108" rx="6" ry="12"
+          fill="#fffbea"/>
+      </svg>
+
+      <div class="lantern-wick"></div>
+
+      <div class="glass-frame frame-left"></div>
+      <div class="glass-frame frame-right"></div>
+      <div class="glass-frame frame-bottom"></div>
+    </div>
+
+    <div class="lantern-base">
+      <div class="base-vent"></div>
+      <div class="base-vent"></div>
+      <div class="base-vent"></div>
+    </div>
+
+    <div class="lantern-finial"></div>
+
+  </div>
+</div>
+
+</section>
